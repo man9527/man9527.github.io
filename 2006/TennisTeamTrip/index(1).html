@@ -1,0 +1,74 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="Photo Gallery Template">
+<meta name="copyright" content="Copyright (c) 2006, Ray Lu">
+<meta name="AUTHOR" content="Ray Lu">
+<title>TAAMN Photo Gallery</title>
+<!-- link rel="stylesheet" href="../../cryer.css" type="text/css"  //-->
+<style type="text/css">
+  body {font-family:cursive; color:red; text-align:center }
+ #fontcolor1 { color:black }
+</style>
+</head>
+
+<!-- body topmargin="3" leftmargin="6" //-->
+<body>
+
+<script language="JavaScript">
+      function LoadGallery(pictureName,imageFile,titleCaption,captionText)
+      {
+			if (document.all)
+  			{
+				document.getElementById(pictureName).style.filter="blendTrans(duration=1)";
+				document.getElementById(pictureName).filters.blendTrans.Apply();
+ 			}
+			document.getElementById(pictureName).src = imageFile;
+			if (document.all)
+ 			{
+ 				document.getElementById(pictureName).filters.blendTrans.Play();
+			}
+			document.getElementById(titleCaption).innerHTML=captionText;
+      }
+</script>
+
+<noscript>
+<h3> This page requires a JavaScript compatible browser with JavaScript enabled. </h3>
+</noscript>
+
+<img src="images/TAAMN-Banner.gif" width="235" height="39" alt="">
+<hr>
+<div align="center">
+<center>
+<table border="1" cellpadding="1" style="background-color:black">
+  <caption> <p id="fontcolor1"><h2> <font size="4"><span lang="zh-tw">&#21488;&#21271;&#22283;&#38555;&#22767;&#24180;&#32178;&#29699;&#36093;</span> - October 2006</font><p> 
+	<font color="#000000"><font face="NSimSun">
+							<span lang="ZH-TW" style="font-size: 12.0pt; font-family: &#26999;&#39636;">
+							<font size="3">&#21313;&#26376;&#20013;&#22312;&#21488;&#21271;&#26377;&#19968;&#22580;&#22283;&#38555;&#22478;&#24066;&#22767;&#24180;&#26479;&#32178;&#29699;&#36093;&#65292;&#35336;&#26377;&#20358;&#33258;&#27472;&#12289;&#32654;&#12289;&#26085;&#12289;&#38867;&#31561;&#22283;&#21450;&#21488;&#28771;&#21508;&#22823;&#22478;&#24066;&#21313;&#39192;&#38538;&#21443;&#21152;&#12290;&#36889;&#38917;&#27604;&#36093;&#38617;&#25171;&#65288;&#21253;&#25324;&#30007;&#23376;&#12289;&#22899;&#23376;&#21450;&#28151;&#21512;&#65289;&#30340;&#25645;&#25803;&#24180;&#32000;&#21152;&#36215;&#20358;&#24517;&#38920;&#26377;</font></span></font><font face="NSimSun" size="4"><span style="font-size: 12.0pt; font-family: &#26999;&#39636;"><font size="3">100</font><span lang="ZH-TW"><font size="3">&#27506;&#20197;&#19978;&#65292;&#25925;&#31281;&#28858;&#22767;&#24180;&#26479;&#65288;&#32769;&#30070;&#30410;&#22767;&#20063;&#65289;&#12290;&#26126;&#24030;&#38617;&#22478;</font></span></span></font><font face="NSimSun" size="4"><span lang="ZH-TW" style="font-size: 12.0pt; font-family: &#26999;&#39636;"><font size="3">&#21516;&#37129;&#26371;&#26371;&#21729;&#21253;&#25324;&#26607;&#36066;&#19990;&#12289;&#30439;&#30408;&#35029;&#12289;&#24373;&#32736;&#29898;&#12289;&#27946;&#24503;&#29983;&#22827;&#23142;&#31561;&#65292;&#33287;&#21069;&#26371;&#21729;&#29579;&#24184;&#30007;&#12289;&#27754;&#20449;&#38596;&#22827;&#23142;&#12289;&#33674;&#29898;&#29796;&#22827;&#23142;&#12289;&#26519;&#25991;&#39467;&#22827;&#23142;&#31561;&#32068;&#25104;&#20841;&#38538;&#21443;&#36093;&#12290;</font></span></font><font size="4"><font face="NSimSun"><span lang="ZH-TW" style="font-size: 12.0pt; font-family: &#26999;&#39636;"><font size="3">&#27492;&#22806;,&#21862;&#21862;&#38538;&#21063;&#30001;&#19968;&#25209;&#29694;&#20219;&#26371;&#21729;&#21450;&#20998;&#25955;&#26044;&#21508;&#22320;&#30340;</font></span></font></font><font face="NSimSun" size="4"><span lang="ZH-TW" style="font-size: 12.0pt; font-family: &#26999;&#39636;"><font size="3">&#26126;&#24030;</font></span></font><font size="4"><font face="NSimSun"><span lang="ZH-TW" style="font-size: 12.0pt; font-family: &#26999;&#39636;"><font size="3">&#20043;&#21451;&#19968;&#36215;&#32068;&#25104;, 
+	&#38499;&#23481;&#40848;&#22823;&#12290;&#27604;&#36093;&#24460;&#20182;&#20497;&#21448;&#21040;&#21335;&#21271;&#21508;&#22320;&#24449;&#25136;&#12289;&#20197;&#29699;&#26371;&#21451;&#20860;&#35264;&#20809;&#12290;</font></span></font>
+	</font></font></p>
+	</caption>
+	<tr>
+		<td rowspan="4">
+                <img border="1" src="images/tennis-01.jpg" id="MyPictureName" width="600" height="440"><br>
+			<div id="MyCaption" align="center">  <p> Tennis Trip  01 </p> </div>
+             </td>
+                        
+		<td><a href="#_self" onmouseover="LoadGallery('MyPictureName','images/tennis-01.jpg','MyCaption','Tennis Trip  01')"><img border="0" src="images/tennis-01.jpg" width="160" height="120"></a></td>
+	      <td><a href="#_self" onmouseover="LoadGallery('MyPictureName','images/tennis-02.jpg','MyCaption','Tennis Trip  02')"><img border="0" src="images/tennis-02.jpg" width="160" height="120"></a></td>
+	      <td><a href="#_self" onmouseover="LoadGallery('MyPictureName','images/tennis-03.jpg','MyCaption','Tennis Trip  03')"><img border="0" src="images/tennis-03.jpg" width="160" height="120"></a></td></tr>
+	<tr>  <td><a href="#_self" onmouseover="LoadGallery('MyPictureName','images/tennis-04.jpg','MyCaption','Tennis Trip  04')"><img border="0" src="images/tennis-04.jpg" width="160" height="120"></a></td>
+	      <td><a href="#_self" onmouseover="LoadGallery('MyPictureName','images/tennis-05.jpg','MyCaption','Tennis Trip  05')"><img border="0" src="images/tennis-05.jpg" width="160" height="120"></a></td>
+	      <td><a href="#_self" onmouseover="LoadGallery('MyPictureName','images/tennis-06.jpg','MyCaption','Tennis Trip  06')"><img border="0" src="images/tennis-06.jpg" width="160" height="120"></a></td></tr>
+	<tr>  <td><a href="#_self" onmouseover="LoadGallery('MyPictureName','images/tennis-07.jpg','MyCaption','Tennis Trip  07')"><img border="0" src="images/tennis-07.jpg" width="160" height="120"></a></td>
+	      <td><a href="#_self" onmouseover="LoadGallery('MyPictureName','images/tennis-08.jpg','MyCaption','Tennis Trip  08')"><img border="0" src="images/tennis-08.jpg" width="160" height="120"></a></td>
+            <td><a href="#_self" onmouseover="LoadGallery('MyPictureName','images/tennis-09.jpg','MyCaption','Tennis Trip  09')"><img border="0" src="images/tennis-09.jpg" width="160" height="120"></a></td></tr>
+      <tr>  <td><a href="#_self" onmouseover="LoadGallery('MyPictureName','images/tennis-10.jpg','MyCaption','Tennis Trip  10')"><img border="0" src="images/tennis-10.jpg" width="160" height="120"></a></td></tr>
+			
+</table>
+</center>
+</div>
+</body>
+
+</html>
