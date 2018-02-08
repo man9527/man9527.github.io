@@ -15,6 +15,13 @@
 </script>
   <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded arjs>
+     
+     <a-box position="0 3.5 -2" rotation="30 30 0" color="skyblue"
+             event-set__enter="_event: mouseenter; material.color: yellowgreen; scale: 3 1 1"
+             event-set__leave="_event: mouseleave; material.color: skyblue; scale: 1 1 1">
+        <a-animation attribute="rotation" begin="click" dur="500" fill="backwards" to="30 30 360"></a-animation>
+      </a-box>
+     
   	<a-marker preset="hiro">
     
        <a-entity abacus mouse-cursor
