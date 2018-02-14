@@ -1,0 +1,29 @@
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<title>Chinese Abacus</title>
+<link rel="shortcut icon" href="../images/abacus.ico" type="image/ico">
+<link rel="stylesheet" href="default.css" type="text/css">
+<script src="./abacus.js?ver&lt;%=DateTime.Now.Ticks.ToString()%&gt;" type="text/javascript"></script>
+</head>
+<body oncontextmenu="return false;">
+<h1>Chinese Abacus</h1>
+<h2>算盘</h2>
+<h2>(Suànpán)</h2>
+<div>
+  <input id="clear" type="submit" value="Clear">
+  <input id="decrement" type="submit" value="Decrement">
+  <input id="increment" type="submit" value="Increment">
+</div>
+<article id="abacus_article" data-format="Chinese" data-sound="1"></article>
+<p id="abacus_p" style="border: ridge 2px #99aabb; padding: 0; width: 976px; margin: 0; text-align: right; line-height: 23px; color: #404040">
+<span id="abacus_span" contenteditable="true" style="padding-right: 16px;">0</span></p>
+<script>initAbacus(null, document.getElementById("abacus_span"));</script><canvas id="abacus_canvas" width="980" height="505" style="background-color: rgb(174, 178, 195);"></canvas>
+<canvas id="abacus_canvas" width="1" height="1"></canvas>
+<hr>
+<a href="../AbacusGB.html" target="_blank">ABACUS Guide Book</a>.<br>
+<a href="../xabacus.html" target="_blank">Manual for xabacus</a> (similar X program).<br>
+JavaScript Source: <a href="abacus.js">abacus.js</a>.<br>
+
+
+</body></html>
