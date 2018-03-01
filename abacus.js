@@ -133,6 +133,7 @@ var subeighthGlyphs = ["", "t", "Q", "Qt"];
 var images;
 
 function romanFraction(number, base, subnumber, subbase, latin) {
+	var a=1;
     var gotFraction = false;
     var halfBase = subbase >> 1;
     var fraction = number;
