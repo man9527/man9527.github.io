@@ -1,11 +1,15 @@
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8">
-<meta name="robots" content="noindex">
-<title>Chinese Abacus</title>
-<link rel="shortcut icon" href="../images/abacus.ico" type="image/ico">
-<link rel="stylesheet" href="default.css" type="text/css">
-<link rel="stylesheet" type="text/css" href="/assets/css/mheader.css?id=123">
-<script src="./abacus.js" type="text/javascript"></script>
+
+<!DOCTYPE html>
+<html lang="en" style="background-color: #FCFAF2;">
+<head>
+  <meta charset="utf-8">
+  <!-- <meta http-equiv="refresh" content="120" > -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="default.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/mheader.css?id=123">
+  <link rel="stylesheet" type="text/css" href="/assets/css/mstyle.css">
+  <!-- Latest compiled and minified CSS -->
   <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -13,24 +17,139 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+  <script src="./abacus.js" type="text/javascript"></script>
+  <style>
+    canvas {
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      width: 600px;
+    }
+  </style>
 </head>
-<body style="border: 0px; background-color: transparent;" oncontextmenu="return false;">
-<h1>Abacus</h1>
-<h2>算盤</h2>
-<div>
-  <input id="clear" type="submit" value="Clear">
-  <input id="decrement" type="submit" value="Decrement">
-  <input id="increment" type="submit" value="Increment">
+<body style="border: 0px; background-color: transparent;">
+<div class="img1 container-fluid" style="padding: 0; margin: 0">
+  <div class="container-fluid" style="padding-top: 5pt; background-size: contain; background-repeat: no-repeat; background-image: url(/assets/mobile/tree_small.png); ">
+    <div class="row" >
+      <div class="col-md-2 col-xs-2"></div>
+      <div class="col-md-8 col-xs-8 text-center" style="font-size: 5vw; font-weight: bold; margin: 0; padding: 0">
+
+      </div>
+      <div class="col-md-2 col-xs-2"></div>
+    </div>
+  </div>
+
+  <div class="container-fluid" style="padding-top: 5vh; background-size: contain; background-repeat: no-repeat; background-image: url(/assets/mobile/background.png)">
+    <div class="row" >
+      <div class="col-md-2 col-xs-2"></div>
+      <div class="col-md-8 col-xs-8 text-center" style="margin: 0; padding: 0; ">
+        <div>
+          <input id="clear" type="submit" value="Clear">
+          <input id="decrement" type="submit" value="Decrement">
+          <input id="increment" type="submit" value="Increment">
+        </div>
+        <article id="abacus_article" data-format="Japanese" data-sound="1" data-rails="15"></article>
+        <p id="abacus_p" style="border: ridge 2px #99aabb; padding: 0; width: 600px; margin: 0; text-align: right; line-height: 23px; color: #404040">
+          <span id="abacus_span" contenteditable="true" style="padding-right: 16px;">0</span></p>
+        <script>initAbacus(null, document.getElementById("abacus_span"));</script>
+      </div>
+      <div class="col-md-2 col-xs-2"></div>
+    </div>
+
+  </div>
 </div>
-<article id="abacus_article" data-format="Japanese" data-sound="1" data-rails="15"></article>
-<p id="abacus_p" style="border: ridge 2px #99aabb; padding: 0; width: 876px; margin: 0; text-align: right; line-height: 23px; color: #404040">
-<span id="abacus_span" contenteditable="true" style="padding-right: 16px;">0</span></p>
-<script>initAbacus(null, document.getElementById("abacus_span"));</script>
-<hr>
-<a href="../AbacusGB.html" target="_blank">ABACUS Guide Book</a>.<br>
-<a href="../xabacus.html" target="_blank">Manual for xabacus</a> (similar X program).<br>
-JavaScript Source: <a href="abacus.js">abacus.js</a>.<br>
 
 
-</body></html>
+<script>
+    $( "#inpark" ).click(function() {
+        window.location.href="/fon/introduction.html";
+    });
+
+    $( "#outpark" ).click(function() {
+        window.location.href="/fon/abacus.html";
+    });
+
+    $( "#outpark1" ).click(function() {
+        window.location.href="/fon/index.html";
+    });
+</script>
+<!-- begin footer -->
+
+<footer>
+  <div class="container-fluid navbar-fixed-bottom" style="z-index:-1; padding: 0;">
+    <div class="col-md-4 col-xs-4"></div>
+    <div class="col-md-4 col-xs-4"></div>
+    <div class="col-md-4 col-xs-4">
+      <img src="/assets/mobile/background2.png" class="img-responsive center-block" alt="Responsive image" style="float:right">
+    </div>
+  </div>
+</footer>
+<script>
+    /*
+     setInterval(function () {
+
+     var murl = window.location.href;
+     console.log("url:" + murl);
+     if (murl.indexOf("local") > -1) {
+     check5fUrl();
+     } else {
+     checkDemoUrl();
+     }
+     },1200000);
+
+     */
+    function checkDemoUrl() {
+        console.log("checkDemoUrl");
+        UrlExists('//demo.yntlove.com/', function (status) {
+            console.log(status);
+            if (status === 200) {
+                console.log(200);
+                location.reload();
+                // file was found
+            } else if (status === 404) {
+                // 404 not found
+                console.log(404);
+            }
+        });
+
+
+
+    }
+
+    function check5fUrl() {
+        console.log("check5fUrl");
+        UrlExists('//5f.yntlove.com/', function (status) {
+            console.log(status);
+            if (status === 200) {
+                console.log(200);
+                // file was found
+            } else if (status === 0) {
+                UrlExists('//demo.yntlove.com/', function (status) {
+                    console.log(status);
+                    if (status === 200) {
+                        console.log(200);
+                        window.location.replace("//demo.yntlove.com/mobile");
+                    }
+                });
+
+            }
+        });
+    }
+
+    function UrlExists(url, cb) {
+        jQuery.ajax({
+            url: url,
+            dataType: 'text',
+            type: 'GET',
+            complete: function (xhr) {
+                if (typeof cb === 'function')
+                    cb.apply(this, [xhr.status]);
+            }
+        });
+    }
+
+</script>
+</body>
+</html>
