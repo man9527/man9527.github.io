@@ -1,0 +1,31 @@
+<!doctype HTML>
+<html>
+<script src="ar/aframe.min.js"></script>
+<script src="ar/aframe-ar.js"> </script>
+<script src="ar/aframe-mouse-cursor-component.min.js"></script>
+<script>
+ AFRAME.registerComponent('abacus', {
+  init: function () {
+    console.log('Registered');
+    this.el.addEventListener('click', function (evt) {
+     console.log('Clicked');
+    });
+  }
+}); 
+ 
+ artoolkitMarker.addEventListener('markerFound', function(event){
+    console.log('marker found');
+	})
+ 
+</script>
+  <body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs>
+   	<a-marker abacus preset="hiro">
+        <a-entity  
+             collada-model=”url(abacus/model.dae)” scale="5 5 5" rotation="0 45 0">
+         </a-entity>
+   	</a-marker>
+   	<a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>

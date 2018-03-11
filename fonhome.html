@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en" style="background-color: #FCFAF2;">
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="refresh" content="120" > -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/mheader.css?id=123">
+    <link rel="stylesheet" type="text/css" href="/assets/css/mstyle.css">
+    <!-- Latest compiled and minified CSS -->
+    <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body style="border: 0px; background-color: transparent;">
+<div class="img1 container-fluid" style="padding: 0; margin: 0">
+    <div class="container-fluid" style="padding-top: 5pt; background-size: contain; background-repeat: no-repeat; background-image: url(/assets/mobile/tree_small.png); ">
+        <div class="row" >
+            <div class="col-md-2 col-xs-2"></div>
+            <div class="col-md-8 col-xs-8 text-center" style="font-size: 5vw; font-weight: bold; margin: 0; padding: 0">
+                Please select 
+            </div>
+            <div class="col-md-2 col-xs-2"></div>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="padding-top: 5vh; background-size: contain; background-repeat: no-repeat; background-image: url(/assets/mobile/background.png)">
+        <div class="row" >
+            <div class="col-md-2 col-xs-2"></div>
+            <div class="col-md-8 col-xs-8 text-center" style="margin: 0; padding: 0; ">
+                <button id="inpark" type="button" style="font-size: 5vw; width: 40vw; height:40vw;
+                border: none; cursor:pointer; overflow: hidden; outline:none; background-color: transparent;
+                        background-position: center; background-size: contain; background-repeat: no-repeat; background-image: url(/assets/mobile/in_park.png);">
+                    Grocery store Now and Then
+                </button>
+            </div>
+            <div class="col-md-2 col-xs-2"></div>
+        </div>
+        <div class="row" style="margin-top: 2vh">
+            <div class="col-md-2 col-xs-2"></div>
+            <div class="col-md-8 col-xs-8 text-center" style="margin: 0; padding: 0; ">
+                <button id="outpark" type="button" style="font-size: 5vw; width: 40vw; height:40vw; background-color: transparent;
+                        background-position: center; background-size: contain; background-repeat: no-repeat; background-image: url(/assets/mobile/out_park.png); border: none; cursor:pointer; overflow: hidden; outline:none;">
+                    Abacus Challenges
+                </button>
+            </div>
+            <div class="col-md-2 col-xs-2"></div>
+        </div>
+        <div class="row" style="margin-top: 2vh">
+            <div class="col-md-2 col-xs-2"></div>
+            <div class="col-md-8 col-xs-8 text-center" style="margin: 0; padding: 0; ">
+                <button id="outpark1" type="button" style="font-size: 5vw; width: 40vw; height:40vw; background-color: transparent;
+                        background-position: center; background-size: contain; background-repeat: no-repeat; background-image: url(/assets/mobile/out_park.png); border: none; cursor:pointer; overflow: hidden; outline:none;">
+                    Augmented Reality
+                </button>
+            </div>
+            <div class="col-md-2 col-xs-2"></div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $( "#inpark" ).click(function() {
+        window.location.href="/fon/introduction.html";
+    });
+
+    $( "#outpark" ).click(function() {
+        window.location.href="/fon/abacus.html";
+    });
+
+    $( "#outpark1" ).click(function() {
+        window.location.href="/fon/index.html";
+    });
+</script>
+<!-- begin footer -->
+
+<footer>
+    <div class="container-fluid navbar-fixed-bottom" style="z-index:-1; padding: 0;">
+        <div class="col-md-4 col-xs-4"></div>
+        <div class="col-md-4 col-xs-4"></div>
+        <div class="col-md-4 col-xs-4">
+            <img src="/assets/mobile/background2.png" class="img-responsive center-block" alt="Responsive image" style="float:right">
+        </div>
+    </div>
+</footer>
+<script>
+    /*
+     setInterval(function () {
+
+     var murl = window.location.href;
+     console.log("url:" + murl);
+     if (murl.indexOf("local") > -1) {
+     check5fUrl();
+     } else {
+     checkDemoUrl();
+     }
+     },1200000);
+
+     */
+    function checkDemoUrl() {
+        console.log("checkDemoUrl");
+        UrlExists('//demo.yntlove.com/', function (status) {
+            console.log(status);
+            if (status === 200) {
+                console.log(200);
+                location.reload();
+                // file was found
+            } else if (status === 404) {
+                // 404 not found
+                console.log(404);
+            }
+        });
+
+
+
+    }
+
+    function check5fUrl() {
+        console.log("check5fUrl");
+        UrlExists('//5f.yntlove.com/', function (status) {
+            console.log(status);
+            if (status === 200) {
+                console.log(200);
+                // file was found
+            } else if (status === 0) {
+                UrlExists('//demo.yntlove.com/', function (status) {
+                    console.log(status);
+                    if (status === 200) {
+                        console.log(200);
+                        window.location.replace("//demo.yntlove.com/mobile");
+                    }
+                });
+
+            }
+        });
+    }
+
+    function UrlExists(url, cb) {
+        jQuery.ajax({
+            url: url,
+            dataType: 'text',
+            type: 'GET',
+            complete: function (xhr) {
+                if (typeof cb === 'function')
+                    cb.apply(this, [xhr.status]);
+            }
+        });
+    }
+
+</script>
+</body>
+</html>
